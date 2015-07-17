@@ -49,6 +49,11 @@ public class Lesson1 {
         "alpha", "bravo", "charlie", "delta", "echo", "foxtrot");
 
     /* YOUR CODE HERE */
+    StringBuilder sb = new StringBuilder();
+    
+    list.forEach(l -> sb.append(l.substring(0, 1)));
+    
+    System.out.println(sb.toString());
   }
 
   /**
