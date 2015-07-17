@@ -66,6 +66,8 @@ public class Lesson1 {
         "alpha", "bravo", "charlie", "delta", "echo", "foxtrot"));
 
     /* YOUR CODE HERE */
+    list.removeIf(l -> l.length()%2!=0);
+    list.forEach(System.out::println);
   }
 
   /**
