@@ -97,6 +97,10 @@ public class Lesson1 {
     map.put("a", 1);
 
     /* YOUR CODE HERE */
+    
+    StringBuilder sb = new StringBuilder();
+    map.entrySet().forEach((Map.Entry<String, Integer> e ) -> sb.append(e.getKey()));
+    System.out.println(sb.toString());
   }
 
   /**
