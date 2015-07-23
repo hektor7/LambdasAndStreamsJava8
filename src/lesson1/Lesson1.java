@@ -99,7 +99,7 @@ public class Lesson1 {
     /* YOUR CODE HERE */
     
     StringBuilder sb = new StringBuilder();
-    map.entrySet().forEach((Map.Entry<String, Integer> e ) -> sb.append(e.getKey()));
+    map.entrySet().forEach( e -> sb.append(e.getKey()).append(e.getValue()));
     System.out.println(sb.toString());
   }
 
