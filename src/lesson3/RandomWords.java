@@ -28,7 +28,7 @@ public class RandomWords {
      * @throws IOException If the source words file cannot be read
      */
     public RandomWords() throws IOException {
-        try (BufferedReader reader = Files.newBufferedReader(Paths.get("words"))) {
+        try (BufferedReader reader = Files.newBufferedReader(Paths.get("resources/words"))) {
             sourceWords = reader.lines().collect(Collectors.toList());    // YOUR CODE HERE
 
             System.out.println("Loaded " + sourceWords.size() + " words");
@@ -45,6 +45,7 @@ public class RandomWords {
         Random rand = new Random();
         List<String> wordList = rand.ints(listSize, 0, this.sourceWords.size())
                 .mapToObj(this.sourceWords::get)
+                .peek(System.out::println)
                 .collect(Collectors.toList()); // YOUR CODE HERE
 
         return wordList;
